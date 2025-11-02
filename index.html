@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Waiting List</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+  <body>
+      <div class="main-menu">
+          <main>
+              <h1>Waiting List For SmartScaleStudios</h1>
+              <!--<img id="gear-icon" src="C:\Users\caedo\OneDrive\General-Codes\Assets\Pictures\business-service-svgrepo-com.svg" alt="gear-icon"/>-->
+              <div class="gear-wrapper"><svg id="gear-icon" width="800px" height="800px" viewBox="0 0 1024 1024" class="icon" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M945 648V502.7l-91.4-18.3c-7.7-35.9-20.7-70.8-38.1-103.3l64.6-54.7-98.3-121.2-64.6 54.7c-28-23.4-58.9-42.9-92-57.1v-94.4L486.1 82.2v93.9c-33 1.6-64 9-92 21.4L329.5 119l-98.3 81.3 64.6 78.5c-17.4 25.1-30.5 54.1-38.1 86.2l-91.4-18.3v141.1l91.4 18.8c7.7 35.2 20.7 69.5 38.1 101.7l-64.6 52.2 98.3 121.2 64.6-52.2c28 23.8 58.9 43.8 92 58.8v93.9l139.1 30.3v-94.4c33-0.9 64-7.7 92-19.8l64.6 80.9 98.3-81.3-64.6-80.9c17.4-25.5 30.5-55 38.1-87.8L945 648z m-389.4-30.2c-65.1-13.5-117.9-78.6-117.9-145.4s52.8-110.5 117.9-97.5 117.9 78 117.9 145.4c0.1 67.3-52.7 111-117.9 97.5z" fill="#1B9BDB" /><path d="M250.6 790.5l-8.8 20.8 87.8-29.6-17.8-35.3zM78.8 375.8L183.7 409l-17-62.5zM533.4 884l3.3 57.3 89.1-29.3zM264.1 185.4l65.7-66.1-88.2 29z" fill="#1B9BDB" /><path d="M857.2 677.3V532l-91.4-18.3c-7.7-35.9-20.7-70.8-38.1-103.3l64.6-54.7L694 234.4l-64.6 54.7c-28-23.4-58.9-42.9-92-57.1v-94.4l-139.1-26.1v93.9c-33 1.6-64 9-92 21.4l-64.6-78.5-98.3 81.3 64.6 78.5c-17.4 25.1-30.5 54.1-38.1 86.2L78.5 376v141.1l91.4 18.8c7.7 35.2 20.7 69.5 38.1 101.7l-64.6 52.2L241.7 811l64.6-52.2c28 23.8 58.9 43.8 92 58.8v93.9l139.1 30.3v-94.4c33-0.9 64-7.7 92-19.8l64.6 80.9 98.3-81.3-64.6-80.9c17.4-25.5 30.5-55 38.1-87.8l91.4 18.8z m-389.4-30.2c-65.1-13.5-117.9-78.6-117.9-145.4s52.8-110.5 117.9-97.5 117.9 78 117.9 145.4c0.1 67.3-52.7 111-117.9 97.5z" fill="#3ED6FF" /><path d="M398.1 111.2l138.9 27 87.8-29.6-138.2-26zM694.1 908.4l88.1-29.6 97.9-80.6-87.8 29.2zM856.7 677.8l88.8-29.9-1-144.8-86.8 29zM880.5 327.2l-98.6-121.3-87.8 28.9 97.6 121.3z" fill="#2481BA" /></svg></div>
+              <section class="center-email">
+                  <form id="waitlist-form">
+                      <label class="email" for="email">Email Address</label>
+                      <input class="email" type="email" name="email" placeholder="email@email.com" required />
+                      <button type="submit" class="submit-btn" aria-label="Submit">
+                          <svg width="24" height="24" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M7 13V10H0L1.74846e-07 6L7 6L7 3L8 3L13 8L8 13H7Z" fill="#3ED6FF"></path> <path d="M14 14V2L16 2V14H14Z" fill="#3ED6FF"></path> </g></svg>
+                      </button>
+                  </form>
+              </section>
+
+              <!--Popup-->
+              <div id="success-popup" class="popup-overlay">
+                  <div class="popup-box">
+                      <h2>🎉 You're on the list!</h2>
+                      <p>Thanks for signing up - we'll keep you posted.</p>
+                      <button id="close-popup">Close</button>
+                  </div>
+              </div>
+
+
+
+              <section class="CTA">
+                  <h2>CleanInBox shows you every account, app, and website connected to your email - so you can unsubscribe, delete, and declutter your online footprint in minutes.</h2>
+                  <h3 id="disclaimer">No spam. No data sharing. Just early sign-up to the tools that put you back in control.</h3>
+              </section>
+          </main>
+      </div>
+
+      <!--popup-script-->
+      <!--<script>
+          const form = document.querySelector('#waitlist-form'); // your existing form
+          const popup = document.getElementById('success-popup');
+          const closeBtn = document.getElementById('close-popup');
+
+          form.addEventListener('submit', function (event) {
+              event.preventDefault(); // stops the page from reloading
+              popup.classList.add('active'); // show popup
+              form.reset(); // clear input
+          });
+
+          closeBtn.addEventListener('click', function () {
+              popup.classList.remove('active'); // hide popup
+          });
+      </script>-->
+
+      <!--email-endpoint-script-->
+      <script>
+          const form = document.querySelector('#waitlist-form'); // your existing form
+          const popup = document.getElementById('success-popup');
+          const closeBtn = document.getElementById('close-popup');
+
+          // Replace with your Google Apps Script Web App URL
+          const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxfsX42WaRrP2lu-CVOsE8wgsRmTDD9A1gWTOn3nY7MXMPJELbMSA611qYGcjNFtV0E/exec';
+
+          form.addEventListener('submit', async function (event) {
+              event.preventDefault(); // stops the page from reloading
+
+              const emailInput = form.querySelector('input[name="email"]');
+              const email = emailInput.value;
+
+              try {
+                  const response = await fetch(GOOGLE_SCRIPT_URL, {
+                      method: 'POST',
+                      headers: { 'Content-Type': 'application/json' },
+                      body: JSON.stringify({ email }),
+                      mode: 'no-cors'
+                  });
+
+
+                      popup.classList.add('active'); // show popup
+                      form.reset(); // clear input
+                  
+
+              } catch (error) {
+                  alert('Submission failed. Please try again.');
+                  console.error(error);
+              }
+          });
+
+          // Popup close button
+          closeBtn.addEventListener('click', function () {
+              popup.classList.remove('active'); // hide popup
+          });
+      </script>
+
+
+  </body>
+</html>
